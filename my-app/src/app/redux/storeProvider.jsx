@@ -1,9 +1,9 @@
-"use strict";
+'use client'
 
-import { store } from "./store";
 import React from 'react';
 import { Provider } from 'react-redux';
+import { store } from './store';
 
-export const StoreProvider = ({children}) => {
-    return <Provider store={store}>{children}</Provider>;
+export default function StoreProvider({ children }) {
+  return <Provider store={store}>{children}</Provider>;
 }

@@ -1,0 +1,15 @@
+.filters {
+    padding: 24px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0px;
+    margin: 24px;
+    border-radius: 8px;
+    background: white;
+    /* text-align:justify; */
+    position: sticky;
+    width: 20%;
+    min-height: 70vh;
+  }

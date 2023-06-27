@@ -1,11 +1,13 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { CartReducer } from "./features/cart";
-import { movieApi } from "./services/movieApi";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit"
+import { basketReducer } from "./features/basket";
+import { filmsApi } from "./services/filmsApi";
+import { filmsReducer } from "./features/films";
 
 export const store = configureStore({
-    reducer: {
-        cart: CartReducer,
-        [movieApi.reducerPath]: movieApi.reducer,
-    },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([movieApi.middleware])
-})
+  reducer: {
+    basket: basketReducer,
+    films: filmsReducer,
+    [filmsApi.reducerPath]: filmsApi.reducer, 
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(filmsApi.middleware)
+});
